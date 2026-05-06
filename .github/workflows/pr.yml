@@ -14,12 +14,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: get the code
-              uses: actions/checkout@v6
+              uses: actions/checkout@v4
             - name: steup java
-              uses: actions/setup-java@v5
+              uses: actions/setup-java@v4
               with:
                 java-version: 21
-                destribution: 'temurin'
+                distribution: 'temurin'
             - name: initilize codeql
               uses: github/codeql-action/init@v4
               with:
