@@ -20,6 +20,7 @@ jobs:
               with:
                 java-version: 21
                 distribution: 'temurin'
+                cache: maven
             - name: initilize codeql
               uses: github/codeql-action/init@v4
               with:
