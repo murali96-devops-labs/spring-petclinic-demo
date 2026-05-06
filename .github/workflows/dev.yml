@@ -33,6 +33,11 @@ jobs:
               with:
                 files: "**/target/surefire-reports/**/*.xml"
                 comment_mode: always
+            - name: upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: spring-petclinic jar file
+                path: target/*.jar
     docker-build-job:
         runs-on: ubuntu-latest
         steps:
@@ -44,5 +49,5 @@ jobs:
               uses: docker/build-push-action@v7
               with:
                 push: false
-                tags: "murali96-devops-labs/springpetclinic:latest"
+                tags: "murali96-devops-labs/springpetclinic:latest"        
         
